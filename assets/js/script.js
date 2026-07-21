@@ -1,27 +1,50 @@
-const ageGate=document.getElementById("ageGate");
-const enterButton=document.getElementById("enterSite");
-if(sessionStorage.getItem("bjb-age-confirmed")==="yes"){
-  ageGate.classList.add("hidden");
-}else{
+const ageGate = document.getElementById("ageGate");
+const enterButton = document.getElementById("enterSite");
+const AGE_KEY = "bjb-age-confirmed";
+
+try {
+  if (localStorage.getItem(AGE_KEY) === "yes") {
+    ageGate?.classList.add("hidden");
+  } else {
+    document.body.classList.add("gate-open");
+  }
+} catch {
   document.body.classList.add("gate-open");
 }
-enterButton.addEventListener("click",()=>{
-  sessionStorage.setItem("bjb-age-confirmed","yes");
-  ageGate.classList.add("hidden");
+
+enterButton?.addEventListener("click", () => {
+  try { localStorage.setItem(AGE_KEY, "yes"); } catch {}
+  ageGate?.classList.add("hidden");
   document.body.classList.remove("gate-open");
 });
-const toggle=document.querySelector(".menu-toggle");
-const nav=document.querySelector(".site-nav");
-toggle.addEventListener("click",()=>{
-  const open=nav.classList.toggle("open");
-  toggle.setAttribute("aria-expanded",String(open));
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
+
+toggle?.addEventListener("click", () => {
+  const open = nav?.classList.toggle("open") ?? false;
+  toggle.setAttribute("aria-expanded", String(open));
 });
-nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
+
+nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
   nav.classList.remove("open");
-  toggle.setAttribute("aria-expanded","false");
+  toggle?.setAttribute("aria-expanded", "false");
 }));
-document.getElementById("year").textContent=new Date().getFullYear();
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}});
-},{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
+
+const revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach(el => observer.observe(el));
+} else {
+  revealItems.forEach(el => el.classList.add("visible"));
+}
