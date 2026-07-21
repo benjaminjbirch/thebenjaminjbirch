@@ -137,17 +137,89 @@
       </div>
     </section>
 
-    <section class="contact section-shell" id="contact">
-      <div class="section-heading reveal">
-        <p class="eyebrow">CONTACT</p>
-        <h2>Across the universe—or just across London.</h2>
+<section class="contact section-shell" id="contact">
+  <div class="contact-intro reveal">
+    <p class="eyebrow">CONTACT</p>
+    <h2>Send Benjamin a message.</h2>
+
+    <p>
+      For reader messages, review enquiries, publishing matters
+      and other professional correspondence.
+    </p>
+  </div>
+
+  <form
+    class="contact-form reveal"
+    action="https://formspree.io/f/mpqvlagn"
+    method="POST"
+  >
+    <div class="contact-form-row">
+      <div class="contact-field">
+        <label for="contact-name">Name</label>
+
+        <input
+          id="contact-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          required
+        >
       </div>
-      <div class="contact-links reveal">
-        <!-- Replace this placeholder email before publishing. -->
-        <a href="mailto:hello@benjaminjbirch.com">hello@benjaminjbirch.com</a>
-        <a href="https://www.goodreads.com/user/show/202834125-benjamin-birch" target="_blank" rel="noopener">Goodreads</a>
+
+      <div class="contact-field">
+        <label for="contact-email">Email address</label>
+
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
       </div>
-    </section>
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-subject">Subject</label>
+
+      <input
+        id="contact-subject"
+        name="subject"
+        type="text"
+        required
+      >
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-message">Message</label>
+
+      <textarea
+        id="contact-message"
+        name="message"
+        rows="7"
+        required
+      ></textarea>
+    </div>
+
+    <!-- Hidden spam trap -->
+    <input
+      type="text"
+      name="_gotcha"
+      class="contact-honeypot"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+    >
+
+    <button class="button button-primary contact-submit" type="submit">
+      Send message
+    </button>
+
+    <p class="contact-form-note">
+      Your details will only be used to respond to your message.
+    </p>
+  </form>
+</section>
   </main>
 
   <footer class="site-footer">
