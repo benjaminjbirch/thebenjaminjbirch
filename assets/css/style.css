@@ -540,7 +540,7 @@ body {
 
 .contact {
   display: grid;
-  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
   gap: clamp(3rem, 8vw, 7rem);
   align-items: start;
   padding-block: 110px 140px;
@@ -554,10 +554,17 @@ body {
 .contact-intro h2 {
   margin: 0 0 1.25rem;
   font-family: var(--serif);
-  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  font-size: clamp(2.5rem, 4.4vw, 4.2rem);
   font-weight: 400;
-  line-height: 1.02;
+  line-height: 1.05;
 }
+
+
+.contact {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
 
 .contact-intro p:last-child {
   max-width: 480px;
