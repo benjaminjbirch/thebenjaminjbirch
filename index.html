@@ -126,11 +126,20 @@
         <h2>Join Benjamin’s reader list.</h2>
         <p>Get new-release news, cover reveals, exclusive excerpts and the occasional scene too hot to leave in the main story.</p>
         <!-- Replace YOUR-USERNAME with your Buttondown username before publishing. -->
-        <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR-USERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/YOUR-USERNAME', 'popupwindow')">
-          <label class="sr-only" for="email">Email address</label>
-          <input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
-          <button class="button button-primary" type="submit">Join the list</button>
-        </form>
+        <form
+  action="https://buttondown.com/api/emails/embed-subscribe/benjaminjbirch"
+  method="post"
+  class="embeddable-buttondown-form"
+>
+  <label for="bd-email">Enter your email</label>
+  <input type="email" name="email" id="bd-email" />
+  <input type="submit" value="Subscribe" />
+  <p>
+    <a href="https://buttondown.com/refer/benjaminjbirch" target="_blank">
+      Powered by Buttondown.
+    </a>
+  </p>
+</form>
         <small>18+ subscribers only. No spam. Unsubscribe whenever you like.</small>
       </div>
     </section>
