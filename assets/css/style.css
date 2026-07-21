@@ -385,3 +385,168 @@ body {
 .book-cover:hover{
     transform:translateY(-6px);
 }
+/* ==================================================
+   BENJAMIN J. BIRCH — KIT READER LIST FORM
+   ================================================== */
+
+.kit-form-wrapper {
+  width: 100%;
+  max-width: 680px;
+  margin: 2rem auto 1rem;
+}
+
+/* Main embedded form */
+.formkit-form[data-uid="0bbac66518"] {
+  width: 100% !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  font-family: "Montserrat", Arial, sans-serif !important;
+  color: #f4efe4 !important;
+}
+
+/* Kit’s internal wrapper */
+.formkit-form[data-uid="0bbac66518"] [data-style="clean"] {
+  width: 100% !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Email and button row */
+.formkit-form[data-uid="0bbac66518"] .formkit-fields {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Remove Kit’s default margins */
+.formkit-form[data-uid="0bbac66518"] .formkit-field,
+.formkit-form[data-uid="0bbac66518"] .formkit-submit {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Email input */
+.formkit-form[data-uid="0bbac66518"] .formkit-input {
+  width: 100% !important;
+  min-height: 54px !important;
+  margin: 0 !important;
+  padding: 0 20px !important;
+
+  border: 1px solid rgba(231, 212, 168, 0.34) !important;
+  border-radius: 999px !important;
+
+  background: rgba(255, 255, 255, 0.045) !important;
+  color: #f4efe4 !important;
+
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 400 !important;
+
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.formkit-form[data-uid="0bbac66518"] .formkit-input::placeholder {
+  color: rgba(200, 194, 208, 0.72) !important;
+  opacity: 1 !important;
+}
+
+.formkit-form[data-uid="0bbac66518"] .formkit-input:focus {
+  border-color: #d7b878 !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 0 0 3px rgba(215, 184, 120, 0.12) !important;
+}
+
+/* Subscribe button */
+.formkit-form[data-uid="0bbac66518"] .formkit-submit {
+  min-height: 54px !important;
+  padding: 0 !important;
+
+  border: 1px solid #d7b878 !important;
+  border-radius: 999px !important;
+
+  background: #d7b878 !important;
+  color: #28263d !important;
+
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+
+  cursor: pointer !important;
+  overflow: hidden !important;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+.formkit-form[data-uid="0bbac66518"] .formkit-submit > span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-height: 54px !important;
+  padding: 0 26px !important;
+
+  color: inherit !important;
+  background: transparent !important;
+}
+
+.formkit-form[data-uid="0bbac66518"] .formkit-submit:hover {
+  background: #eee0b8 !important;
+  border-color: #eee0b8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(10, 9, 20, 0.22) !important;
+}
+
+/* Error message */
+.formkit-form[data-uid="0bbac66518"] .formkit-alert-error {
+  grid-column: 1 / -1 !important;
+
+  margin: 12px 0 0 !important;
+  padding: 12px 16px !important;
+
+  border: 1px solid rgba(235, 142, 142, 0.5) !important;
+  border-radius: 10px !important;
+
+  background: rgba(135, 49, 65, 0.15) !important;
+  color: #f0c7cc !important;
+
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-size: 0.82rem !important;
+}
+
+/* Kit attribution */
+.formkit-form[data-uid="0bbac66518"]
+.formkit-powered-by-convertkit-container {
+  margin-top: 12px !important;
+  opacity: 0.52 !important;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .formkit-form[data-uid="0bbac66518"] .formkit-fields {
+    grid-template-columns: 1fr !important;
+  }
+
+  .formkit-form[data-uid="0bbac66518"] .formkit-input {
+    font-size: 16px !important;
+  }
+
+  .formkit-form[data-uid="0bbac66518"] .formkit-submit {
+    width: 100% !important;
+  }
+}
