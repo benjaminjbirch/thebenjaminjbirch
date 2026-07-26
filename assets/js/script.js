@@ -76,22 +76,20 @@
 
   const readerForm = document.getElementById("readerListForm");
   const readerSubmitButton = document.getElementById("readerSubmitButton");
-  const readerDeliveryNote = document.getElementById("readerDeliveryNote");
+  const readerStatus = document.getElementById("readerStatus");
 
   readerForm?.addEventListener("submit", () => {
-    // Do not prevent the native form submission. Buttondown opens visibly in a
-    // new tab, so the signup still works even if this JavaScript is blocked.
+    // The email field and 18+ checkbox are both required. The file is never
+    // shown on the page and is only requested after the valid form submits.
     if (!readerForm.checkValidity()) return;
 
-    if (readerDeliveryNote) readerDeliveryNote.hidden = false;
-    if (readerSubmitButton) readerSubmitButton.textContent = "Signup opened — download below";
+    if (readerSubmitButton) readerSubmitButton.textContent = "Joining…";
+    if (readerStatus) readerStatus.hidden = false;
 
-    // Attempt the promised immediate download. The permanent download button
-    // remains visible if the browser blocks automatic downloads.
     const downloadLink = document.createElement("a");
     downloadLink.href = "downloads/a-claim-renounced-reader-list-edition.pdf";
     downloadLink.download = "A Claim Renounced - Reader List Edition.pdf";
-    downloadLink.style.display = "none";
+    downloadLink.hidden = true;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     downloadLink.remove();

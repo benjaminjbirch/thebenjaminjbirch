@@ -400,17 +400,13 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
   .age-panel h1 { font-size: 48px; }
 }
 
-
-
-/* Reader-list reliability: native Buttondown submission plus permanent file access. */
-.reader-delivery {
-  margin-top: 24px;
-  padding: 22px;
-  border: 1px solid rgba(112,76,55,.25);
-  background: rgba(255,255,255,.2);
+/* Reader-list delivery appears only after a valid form submission. */
+.reader-status {
+  margin: 20px 0 0;
+  padding: 15px 17px;
+  border-left: 3px solid #a7653d;
+  background: rgba(255,255,255,.22);
+  color: #674f42;
+  font: 400 14px/1.6 var(--serif);
 }
-.reader-delivery p { margin: 0 0 14px; color: #5e5148; font: 400 15px/1.55 var(--serif); }
-.reader-delivery .button { width: 100%; margin: 0; color: #2b211d; border-color: rgba(112,76,55,.4); }
-.reader-delivery-note { margin-top: 14px !important; color: #855b45 !important; font-size: 13px !important; }
-.reader-fallback { margin: 18px 0 0; color: #766d66; font-size: 11px; line-height: 1.55; }
-.reader-fallback a { color: #7d482f; text-decoration: underline; text-underline-offset: 3px; }
+.reader-status[hidden] { display: none; }
