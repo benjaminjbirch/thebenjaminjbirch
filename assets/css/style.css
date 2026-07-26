@@ -399,3 +399,23 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
   .age-panel { padding-inline: 20px; }
   .age-panel h1 { font-size: 48px; }
 }
+
+.reader-download-status {
+  margin: 22px 0 0;
+  padding: 16px 18px;
+  border: 1px solid rgba(112, 76, 55, .25);
+  background: rgba(255, 255, 255, .36);
+  color: #554940;
+  font: 400 14px/1.65 var(--sans);
+}
+.reader-download-status a {
+  color: #8c4f2f;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.reader-form .button:disabled {
+  cursor: default;
+  opacity: .78;
+}
+.form-submit-frame[hidden] { display: none; }

@@ -74,6 +74,35 @@
     if (window.innerWidth > 980) closeMenu();
   });
 
+  const readerForm = document.getElementById("readerListForm");
+  const readerDownloadStatus = document.getElementById("readerDownloadStatus");
+
+  readerForm?.addEventListener("submit", (event) => {
+    if (!readerForm.checkValidity()) return;
+
+    const submitButton = readerForm.querySelector('button[type="submit"]');
+    if (readerForm.dataset.submitted === "true") {
+      event.preventDefault();
+      return;
+    }
+
+    readerForm.dataset.submitted = "true";
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "downloads/a-claim-renounced-reader-list-edition.pdf";
+    downloadLink.download = "A Claim Renounced - Reader List Edition.pdf";
+    downloadLink.hidden = true;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
+
+    if (readerDownloadStatus) readerDownloadStatus.hidden = false;
+    if (submitButton) {
+      submitButton.textContent = "Joined — book downloading";
+      submitButton.disabled = true;
+    }
+  });
+
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 })();
