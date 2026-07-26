@@ -356,3 +356,46 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Reliability fixes: preserve every image's natural proportions. */
+.hero-book img,
+.book-cover img,
+.series-art img,
+.about-mark img {
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-book img,
+.book-cover img,
+.series-art img {
+  aspect-ratio: 2 / 3;
+}
+
+.about-mark {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+
+.about-mark img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+#main-content:focus { outline: none; }
+
+@media (max-width: 420px) {
+  .site-header { padding-inline: 14px; }
+  .brand { gap: 10px; }
+  .brand-seal { width: 40px; height: 40px; }
+  .brand-name { max-width: 195px; font-size: 13px; letter-spacing: .1em; }
+  .menu-button { width: 40px; height: 40px; }
+  .hero { padding-inline: 18px; }
+  .hero-book { width: min(280px, 86%); }
+  .age-gate { padding: 16px; }
+  .age-panel { padding-inline: 20px; }
+  .age-panel h1 { font-size: 48px; }
+}

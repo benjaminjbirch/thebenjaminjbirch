@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charSet="utf-8"/>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="theme-color" content="#05070c"/>
-<link rel="stylesheet" href="assets/css/style.css?v=20260726-1">
+<link rel="stylesheet" href="assets/css/style.css?v=20260726-2">
 <title>Benjamin J. Birch | Adult M/M Science-Fiction Romance</title>
 <meta name="description" content="Explicit adult M/M science-fiction romance about alien worlds, dangerous devotion, hard-won trust, and happily-ever-afters."/>
 <meta property="og:title" content="Benjamin J. Birch | Adult M/M Science-Fiction Romance"/>
 <meta property="og:description" content="Explicit adult M/M science-fiction romance about alien worlds, dangerous devotion, hard-won trust, and happily-ever-afters."/>
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="assets/images/a-claim-undone.webp"/>
-<link rel="shortcut icon" href="assets/images/benjamin-j-birch-logo.webp"/>
-<link rel="icon" href="assets/images/benjamin-j-birch-logo.webp"/>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body class="age-locked">
 <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="age-title">
@@ -22,10 +24,10 @@
 <h1 id="age-title">Welcome</h1>
 <p>Benjamin J. Birch writes explicit, open-door M/M romance. Please confirm that you are eighteen or older to enter.</p>
 <div class="age-actions">
-<button class="button button-filled" id="enterSite" type="button" onclick="enterBirchSite()">Yes — I am 18 or older</button>
+<button class="button button-filled" id="enterSite" type="button">Yes — I am 18 or older</button>
 <a class="button button-line" href="https://www.google.com">Leave</a>
 </div>
-<small>This confirmation appears whenever the site is opened.</small>
+<small>Your confirmation is remembered while this browser tab remains open.</small>
 </div>
 </div>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -55,7 +57,7 @@
 <a href="#about">About</a>
 </nav>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="hero" aria-labelledby="hero-title">
 <div class="starfield" aria-hidden="true">
 </div>
@@ -255,18 +257,9 @@
 <a href="#arc-team">ARC Team</a>
 <a href="privacy.html">Privacy</a>
 </nav>
-<p>© <!-- -->2026<!-- --> Benjamin J. Birch. All rights reserved.</p>
+<p>© <span id="year">2026</span> Benjamin J. Birch. All rights reserved.</p>
 </footer>
-<script>
-function enterBirchSite() {
-  var gate = document.getElementById("ageGate");
-  if (gate) {
-    gate.setAttribute("aria-hidden", "true");
-    gate.style.display = "none";
-  }
-  document.body.classList.remove("age-locked");
-}
-</script>
-<script src="assets/js/script.js?v=20260726-1"></script>
+
+<script src="assets/js/script.js?v=20260726-2"></script>
 </body>
 </html>

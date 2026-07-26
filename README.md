@@ -1,44 +1,26 @@
 # Benjamin J. Birch author website
 
-A polished, multi-page static website ready for GitHub Pages.
+Static GitHub Pages website. No build step is required.
 
-## Before publishing
+## Fastest upload method
 
-Open `index.html` and replace:
+1. Unzip the supplied package.
+2. Open the existing GitHub repository.
+3. Delete the old website files, or overwrite them.
+4. Upload **everything inside this folder**, including the `assets` and `downloads` folders.
+5. Commit the changes and wait for GitHub Pages to redeploy.
+6. Hard-refresh the live page with `Ctrl + F5`.
 
-1. `YOUR-USERNAME` with the Buttondown username for Benjamin J. Birch.
-2. `hello@benjaminjbirch.com` with the real contact email.
-3. The disabled **Coming soon** button with the book's retailer link once available.
+## Working features
 
-The temporary book cover is made entirely with CSS, so it can be replaced later with a real cover image.
+- Reliable 18+ gate, remembered for the current browser tab
+- Responsive desktop and mobile layout
+- Mobile navigation on the home and privacy pages
+- Buttondown reader-list form
+- Formspree ARC application form
+- Correctly proportioned cover and author-logo images
+- Browser, Android, and Apple favicons
+- Privacy and 404 pages
+- Reader-list PDF included in `downloads`
 
-## Uploading to GitHub
-
-1. Create or open the GitHub repository for the website.
-2. Upload everything inside this folder, preserving the `assets` folders.
-3. Commit the files.
-4. In **Settings → Pages**, publish from the main branch and root folder.
-
-The site includes:
-
-- Mobile-friendly responsive design
-- 18+ age gate
-- Book feature section
-- Content/heat notice
-- Author biography
-- Goodreads link
-- Buttondown-ready reader-list form
-- Contact section
-- Social sharing metadata
-
-
-## Polished version additions
-
-- Dedicated page for *The First Word Was Mine*
-- Persistent 18+ confirmation stored only in the visitor's browser
-- Cleaner Cormorant Garamond and Montserrat typography
-- Privacy page
-- Custom 404 page
-- Sitemap and robots file
-- Improved accessibility and graceful animation fallback
-- Shared, organised assets with no duplicated inline styling
+There is no build command, dependency installation, or project tool required.

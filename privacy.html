@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05070c">
   <title>Privacy | Benjamin J. Birch</title>
-  <link rel="icon" href="assets/images/benjamin-j-birch-logo.webp">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260726-1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260726-2">
 </head>
 <body>
   <header class="site-header static-header">
@@ -14,7 +16,10 @@
       <span class="brand-seal" aria-hidden="true"><i>B</i><i>J</i><i>B</i></span>
       <span class="brand-name">Benjamin J. Birch</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="menu-button" aria-expanded="false" aria-controls="site-navigation">
+      <span></span><span></span><span></span><b>Menu</b>
+    </button>
+    <nav id="site-navigation" class="site-nav" aria-label="Main navigation">
       <a href="index.html#books">Books</a>
       <a href="index.html#reader-list">Reader List</a>
       <a href="index.html#arc-team">ARC Team</a>
@@ -27,7 +32,7 @@
     <p>This website does not use advertising trackers or sell personal information.</p>
 
     <h2>Age confirmation</h2>
-    <p>The website asks visitors to confirm that they are 18 or older. The answer is not sent to Benjamin J. Birch or stored by this website.</p>
+    <p>The website asks visitors to confirm that they are 18 or older. The answer is not sent to Benjamin J. Birch. It is stored only in the visitor’s browser tab for the duration of that browsing session.</p>
 
     <h2>Reader list</h2>
     <p>Reader-list subscriptions are processed by Buttondown. Your details are used only to send the emails you requested, and every email includes an unsubscribe option.</p>
@@ -42,5 +47,6 @@
     <p>Questions may be sent to <a href="mailto:thebenjaminjbirch@gmail.com">thebenjaminjbirch@gmail.com</a>.</p>
     <a class="button button-line" href="index.html">Return home</a>
   </main>
+  <script src="assets/js/script.js?v=20260726-2"></script>
 </body>
 </html>
