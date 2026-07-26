@@ -272,6 +272,8 @@ footer p { margin: 0; color: #77746f; font-size: 10px; letter-spacing: .08em; }
 footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px solid rgba(255,255,255,.06); }
 
 .age-gate { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(3,5,8,.96); backdrop-filter: blur(15px); }
+.age-gate.hidden,
+.age-gate[hidden] { display: none !important; }
 .age-panel { position: relative; width: min(560px, 100%); padding: 66px 55px 48px; border: 1px solid var(--line); background: radial-gradient(circle at 50% 0, rgba(181,107,59,.16), transparent 35%), #090d15; text-align: center; box-shadow: 0 35px 100px rgba(0,0,0,.65); }
 .age-panel::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(197,165,119,.08); pointer-events: none; }
 .age-seal { position: relative; z-index: 1; width: 82px; height: 82px; margin: -108px auto 30px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: var(--ink); color: var(--gold); font: 400 25px/1 var(--serif); box-shadow: 0 0 40px rgba(181,107,59,.24); }

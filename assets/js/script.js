@@ -2,13 +2,20 @@ const ageGate = document.getElementById("ageGate");
 const enterButton = document.getElementById("enterSite");
 const ageKey = "bjb-age-confirmed";
 
+const dismissAgeGate = () => {
+  if (!ageGate) return;
+  ageGate.classList.add("hidden");
+  ageGate.hidden = true;
+  ageGate.setAttribute("aria-hidden", "true");
+};
+
 try {
-  if (localStorage.getItem(ageKey) === "yes") ageGate?.classList.add("hidden");
+  if (localStorage.getItem(ageKey) === "yes") dismissAgeGate();
 } catch {}
 
 enterButton?.addEventListener("click", () => {
   try { localStorage.setItem(ageKey, "yes"); } catch {}
-  ageGate?.classList.add("hidden");
+  dismissAgeGate();
 });
 
 const menuButton = document.querySelector(".menu-button");
