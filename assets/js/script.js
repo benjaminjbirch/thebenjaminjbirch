@@ -12,13 +12,13 @@ enterButton?.addEventListener("click", () => {
 });
 
 const menuButton = document.querySelector(".menu-button");
-const nav = document.querySelector(".main-nav");
+const nav = document.querySelector(".site-nav");
 menuButton?.addEventListener("click", () => {
-  const open = nav?.classList.toggle("open") ?? false;
+  const open = nav?.classList.toggle("is-open") ?? false;
   menuButton.setAttribute("aria-expanded", String(open));
 });
 nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-  nav.classList.remove("open");
+  nav.classList.remove("is-open");
   menuButton?.setAttribute("aria-expanded", "false");
 }));
 
