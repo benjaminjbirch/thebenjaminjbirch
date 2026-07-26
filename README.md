@@ -21,6 +21,6 @@ Static GitHub Pages website. No build step is required.
 - Correctly proportioned cover and author-logo images
 - Browser, Android, and Apple favicons
 - Privacy and 404 pages
-- Reader-list PDF included in `downloads`
+- Reader-list PDF included in `downloads` and delivered immediately after form submission
 
 There is no build command, dependency installation, or project tool required.

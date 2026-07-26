@@ -75,32 +75,30 @@
   });
 
   const readerForm = document.getElementById("readerListForm");
-  const readerDownloadStatus = document.getElementById("readerDownloadStatus");
+  const readerSubmitButton = document.getElementById("readerSubmitButton");
+  const readerDeliveryNote = document.getElementById("readerDeliveryNote");
 
-  readerForm?.addEventListener("submit", (event) => {
+  readerForm?.addEventListener("submit", () => {
+    // Do not prevent the native form submission. Buttondown opens visibly in a
+    // new tab, so the signup still works even if this JavaScript is blocked.
     if (!readerForm.checkValidity()) return;
 
-    const submitButton = readerForm.querySelector('button[type="submit"]');
-    if (readerForm.dataset.submitted === "true") {
-      event.preventDefault();
-      return;
-    }
+    if (readerDeliveryNote) readerDeliveryNote.hidden = false;
+    if (readerSubmitButton) readerSubmitButton.textContent = "Signup opened — download below";
 
-    readerForm.dataset.submitted = "true";
-
+    // Attempt the promised immediate download. The permanent download button
+    // remains visible if the browser blocks automatic downloads.
     const downloadLink = document.createElement("a");
     downloadLink.href = "downloads/a-claim-renounced-reader-list-edition.pdf";
     downloadLink.download = "A Claim Renounced - Reader List Edition.pdf";
-    downloadLink.hidden = true;
+    downloadLink.style.display = "none";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     downloadLink.remove();
 
-    if (readerDownloadStatus) readerDownloadStatus.hidden = false;
-    if (submitButton) {
-      submitButton.textContent = "Joined — book downloading";
-      submitButton.disabled = true;
-    }
+    window.setTimeout(() => {
+      if (readerSubmitButton) readerSubmitButton.textContent = "Join the reader list";
+    }, 4000);
   });
 
   const year = document.getElementById("year");

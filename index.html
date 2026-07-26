@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="theme-color" content="#05070c"/>
-<link rel="stylesheet" href="assets/css/style.css?v=20260726-2">
+<link rel="stylesheet" href="assets/css/style.css?v=20260726-3">
 <title>Benjamin J. Birch | Adult M/M Science-Fiction Romance</title>
 <meta name="description" content="Explicit adult M/M science-fiction romance about alien worlds, dangerous devotion, hard-won trust, and happily-ever-afters."/>
 <meta property="og:title" content="Benjamin J. Birch | Adult M/M Science-Fiction Romance"/>
@@ -179,23 +179,24 @@
 <li>ARC opportunities and early reveals</li>
 </ul>
 </div>
-<form id="readerListForm" class="reader-form embeddable-buttondown-form" action="https://buttondown.com/api/emails/embed-subscribe/benjamin-j-birch" method="post" target="buttondownSubmitFrame">
+<form id="readerListForm" class="reader-form embeddable-buttondown-form" action="https://buttondown.com/api/emails/embed-subscribe/benjamin-j-birch" method="post" target="_blank">
 <p class="form-note">For readers aged 18 and over.</p>
-<label>First name<input autoComplete="given-name" required="" name="metadata__first_name"/>
-</label>
-<label>Email address<input type="email" autoComplete="email" required="" name="email"/>
-</label>
-<label class="check-label">
-<input type="checkbox" required="" name="metadata__age_confirmed" value="Yes"/>
+<label for="readerEmail">Email address<input id="readerEmail" type="email" autocomplete="email" required name="email" placeholder="you@example.com"/></label>
+<label class="check-label" for="readerAge">
+<input id="readerAge" type="checkbox" required/>
 <span>I confirm that I am 18 or older and want to receive reader emails.</span>
 </label>
 <input type="hidden" name="tag" value="Website Reader List"/>
 <input type="hidden" name="embed" value="1"/>
-<button class="button button-filled" type="submit">Join the reader list</button>
-<small>Your free PDF downloads immediately. Please also confirm your email to remain on the reader list. No spam; unsubscribe whenever you like.</small>
-<p class="reader-download-status" id="readerDownloadStatus" role="status" aria-live="polite" hidden>Your free book should be downloading now. <a href="downloads/a-claim-renounced-reader-list-edition.pdf" download="A Claim Renounced - Reader List Edition.pdf">Download it again</a> if needed, then check your inbox to confirm your subscription.</p>
+<button class="button button-filled" id="readerSubmitButton" type="submit">Join the reader list</button>
+<small>The secure Buttondown confirmation opens in a new tab. Your free PDF is available immediately below.</small>
+<div class="reader-delivery" id="readerDelivery" role="status" aria-live="polite">
+<p><strong>Your free book:</strong> <i>A Claim Renounced</i></p>
+<a class="button button-line" href="downloads/a-claim-renounced-reader-list-edition.pdf" download="A Claim Renounced - Reader List Edition.pdf">Download the free PDF</a>
+<p class="reader-delivery-note" id="readerDeliveryNote" hidden>Signup opened in a new tab. Download your book here, then check your inbox to confirm your email.</p>
+</div>
+<p class="reader-fallback">Signup page not opening? <a href="https://buttondown.com/benjamin-j-birch" target="_blank" rel="noopener">Open the reader-list signup directly</a>.</p>
 </form>
-<iframe class="form-submit-frame" name="buttondownSubmitFrame" title="Reader list signup response" hidden></iframe>
 </section>
 <section class="arc-section" id="arc-team">
 <div class="arc-heading">
@@ -263,6 +264,6 @@
 <p>© <span id="year">2026</span> Benjamin J. Birch. All rights reserved.</p>
 </footer>
 
-<script src="assets/js/script.js?v=20260726-2"></script>
+<script src="assets/js/script.js?v=20260726-3"></script>
 </body>
 </html>

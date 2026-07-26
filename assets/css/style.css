@@ -400,22 +400,17 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
   .age-panel h1 { font-size: 48px; }
 }
 
-.reader-download-status {
-  margin: 22px 0 0;
-  padding: 16px 18px;
-  border: 1px solid rgba(112, 76, 55, .25);
-  background: rgba(255, 255, 255, .36);
-  color: #554940;
-  font: 400 14px/1.65 var(--sans);
+
+
+/* Reader-list reliability: native Buttondown submission plus permanent file access. */
+.reader-delivery {
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid rgba(112,76,55,.25);
+  background: rgba(255,255,255,.2);
 }
-.reader-download-status a {
-  color: #8c4f2f;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.reader-form .button:disabled {
-  cursor: default;
-  opacity: .78;
-}
-.form-submit-frame[hidden] { display: none; }
+.reader-delivery p { margin: 0 0 14px; color: #5e5148; font: 400 15px/1.55 var(--serif); }
+.reader-delivery .button { width: 100%; margin: 0; color: #2b211d; border-color: rgba(112,76,55,.4); }
+.reader-delivery-note { margin-top: 14px !important; color: #855b45 !important; font-size: 13px !important; }
+.reader-fallback { margin: 18px 0 0; color: #766d66; font-size: 11px; line-height: 1.55; }
+.reader-fallback a { color: #7d482f; text-decoration: underline; text-underline-offset: 3px; }
