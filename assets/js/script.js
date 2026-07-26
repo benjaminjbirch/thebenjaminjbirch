@@ -4,9 +4,11 @@ const ageKey = "bjb-age-confirmed";
 
 const dismissAgeGate = () => {
   if (!ageGate) return;
+  ageGate.style.setProperty("display", "none", "important");
   ageGate.classList.add("hidden");
   ageGate.hidden = true;
   ageGate.setAttribute("aria-hidden", "true");
+  ageGate.remove();
 };
 
 try {

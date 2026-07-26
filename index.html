@@ -3,7 +3,7 @@
 <head>
 <meta charSet="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20260726-2">
 <title>Benjamin J. Birch | Adult M/M Science-Fiction Romance</title>
 <meta name="description" content="Explicit adult M/M science-fiction romance about alien worlds, dangerous devotion, hard-won trust, and happily-ever-afters."/>
 <meta property="og:title" content="Benjamin J. Birch | Adult M/M Science-Fiction Romance"/>
@@ -21,7 +21,7 @@
 <h1 id="age-title">Welcome</h1>
 <p>Benjamin J. Birch writes explicit, open-door M/M romance. Please confirm that you are eighteen or older to enter.</p>
 <div class="age-actions">
-<button class="button button-filled" id="enterSite" type="button">I am 18 or older</button>
+<button class="button button-filled" id="enterSite" type="button" onclick="var gate=document.getElementById('ageGate');if(gate){gate.style.setProperty('display','none','important');gate.hidden=true;gate.setAttribute('aria-hidden','true');gate.remove();}try{localStorage.setItem('bjb-age-confirmed','yes');}catch(error){}">I am 18 or older</button>
 <a class="button button-line" href="https://www.google.com">Leave</a>
 </div>
 <small>Your choice will be remembered on this device.</small>
@@ -251,6 +251,6 @@
 <p>Adult M/M romance · London, UK</p>
 <p>© <!-- -->2026<!-- --> Benjamin J. Birch. All rights reserved.</p>
 </footer>
-<script src="assets/js/script.js"></script>
+<script src="assets/js/script.js?v=20260726-2"></script>
 </body>
 </html>
