@@ -156,11 +156,20 @@ img { display: block; max-width: 100%; }
 .quiet-link span { color: var(--gold); transition: transform .2s ease; }
 .quiet-link:hover span { transform: translateX(5px); }
 
-.hero-book { position: relative; z-index: 2; width: min(415px, 74%); justify-self: center; perspective: 1400px; }
+.hero-book {
+  position: relative;
+  z-index: 2;
+  width: min(360px, 26vw, calc((100svh - 250px) * .6667));
+  justify-self: center;
+  perspective: 1400px;
+}
 .hero-book img {
   position: relative;
   z-index: 3;
   width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
   box-shadow: 22px 35px 70px rgba(0,0,0,.62), 0 0 0 1px rgba(255,255,255,.1);
   transform: rotateY(-4deg) rotateZ(-1deg);
 }
@@ -292,6 +301,7 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
   .menu-button b { position: absolute; clip: rect(0 0 0 0); }
   .hero { min-height: 830px; padding-top: 145px; grid-template-columns: 1.05fr .75fr; }
   .hero h1 { font-size: clamp(54px, 7.5vw, 78px); }
+  .hero-book { width: min(330px, 34vw, calc((100svh - 220px) * .6667)); }
   .orbital-one { width: 490px; height: 490px; }
   .orbital-two { width: 590px; }
   .section-intro { gap: 50px; }
