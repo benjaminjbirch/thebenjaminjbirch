@@ -13,15 +13,25 @@
 
   const unlockSite = () => {
     try { window.localStorage.setItem(storageKey, "yes"); } catch (_) {}
-    if (gate) gate.hidden = true;
+    if (gate) {
+      gate.hidden = true;
+      gate.setAttribute("aria-hidden", "true");
+      gate.style.display = "none";
+    }
     body.classList.remove("age-locked");
   };
 
   if (gate && enterButton && !hasAgeConfirmation()) {
     gate.hidden = false;
+    gate.setAttribute("aria-hidden", "false");
+    gate.style.removeProperty("display");
     body.classList.add("age-locked");
     window.setTimeout(() => enterButton.focus(), 0);
     enterButton.addEventListener("click", unlockSite);
+  } else if (gate) {
+    gate.hidden = true;
+    gate.setAttribute("aria-hidden", "true");
+    gate.style.display = "none";
   }
 
   const header = document.querySelector(".site-header");

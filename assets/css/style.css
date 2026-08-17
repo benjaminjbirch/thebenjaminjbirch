@@ -532,6 +532,7 @@ footer > p { grid-column: 1 / -1; }
 
 
 /* GitHub Pages support pages. */
+.age-gate[hidden] { display: none !important; }
 .legal-page,
 .not-found main {
   width: min(760px, calc(100% - 48px));
