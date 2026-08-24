@@ -363,10 +363,8 @@ input:focus, textarea:focus { border-bottom-color: #a7653d; box-shadow: 0 1px #a
 .field-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .arc-form .button { margin-top: 8px; }
 
-.about-section { padding: 120px clamp(28px, 11vw, 175px); display: grid; grid-template-columns: minmax(280px, .72fr) 1fr; gap: clamp(65px, 11vw, 165px); align-items: center; background: #e7ded1; color: #1a1818; }
-.about-mark { position: relative; max-width: 470px; padding: 18px; border: 1px solid rgba(118,75,50,.24); }
-.about-mark::after { content: ""; position: absolute; inset: -13px 15px 15px -13px; border: 1px solid rgba(118,75,50,.14); pointer-events: none; }
-.about-mark img { width: 100%; }
+.about-section { padding: 120px clamp(28px, 11vw, 175px); display: block; background: #e7ded1; color: #1a1818; }
+.about-copy { max-width: 820px; margin: 0 auto; }
 .about-copy .kicker { color: #995a36; }
 .about-copy p { max-width: 720px; color: #655d55; }
 .about-copy .about-lede { color: #2d2825; font: italic 25px/1.5 var(--serif); }
@@ -438,7 +436,6 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
   .reader-section { gap: 50px; }
   .arc-heading { position: static; }
   .field-pair { grid-template-columns: 1fr; gap: 0; }
-  .about-mark { max-width: 340px; }
   footer { grid-template-columns: 1fr; }
   .footer-brand .brand-name { font-size: 15px; }
   footer p:last-child { grid-column: 1; }
