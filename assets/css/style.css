@@ -38,6 +38,14 @@ img { display: block; max-width: 100%; }
 }
 
 .brand { display: flex; align-items: center; gap: 20px; }
+.brand-logo {
+  width: 53px;
+  height: 53px;
+  flex: 0 0 auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
 .brand-seal {
   position: relative;
   width: 53px;
@@ -403,6 +411,7 @@ footer p:last-child { grid-column: 1 / -1; padding-top: 25px; border-top: 1px so
   .site-header { padding-inline: 20px; }
   .brand { gap: 14px; }
   .brand-seal { width: 44px; height: 44px; }
+  .brand-logo { width: 44px; height: 44px; }
   .brand-name { max-width: 230px; font-size: 15px; letter-spacing: .13em; }
   .hero { min-height: auto; padding: 135px 24px 76px; grid-template-columns: 1fr; }
   .hero-copy { padding-top: 0; }
@@ -480,9 +489,15 @@ body.menu-open { overflow: hidden; }
   height: 45px;
 }
 
+.site-header.is-scrolled .brand-logo {
+  width: 45px;
+  height: 45px;
+}
+
 .site-header.is-scrolled .brand-name { font-size: clamp(17px, 1.65vw, 24px); }
 
 .brand-seal,
+.brand-logo,
 .brand-name { transition: width .25s ease, height .25s ease, font-size .25s ease; }
 
 .hero {
